@@ -1,0 +1,26 @@
+{
+  "name": "@swnb/fabric",
+  "version": "0.1.0",
+  "description": "workspace setup config",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swnb/ts-fabric.git"
+  },
+  "author": "swnb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swnb/ts-fabric/issues"
+  },
+  "homepage": "https://github.com/swnb/ts-fabric#readme",
+  "dependencies": {
+    "@umijs/fabric": "^2.4.11"
+  }
+}
