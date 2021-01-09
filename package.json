@@ -1,13 +1,15 @@
 {
   "name": "@swnb/fabric",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "workspace setup config",
   "main": "dist/index.js",
+  "bin": "./dist/setup.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc --build tsconfig.json",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
