@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
+const fs = require('fs')
+const path = require('path')
 
 const prettierConfigPath = path.resolve('./.prettierrc.js')
 const prettierConfigContent = `
@@ -10,7 +10,7 @@ module.exports = {
   ...fabric.prettier,
 };
 `
-fs.createWriteStream(prettierConfigPath).write(prettierConfigContent, err => {
+fs.createWriteStream(prettierConfigPath).write(prettierConfigContent, (err: Error) => {
   if (err) {
     console.error(`can't creat .prettierrc.js in ${prettierConfigPath}`)
     return
@@ -25,7 +25,7 @@ const eslintConfigContent = `
   "extends": "./node_modules/@swnb/fabric/dist/eslint"
 }
 `
-fs.createWriteStream(eslintConfigPath).write(eslintConfigContent, err => {
+fs.createWriteStream(eslintConfigPath).write(eslintConfigContent, (err: Error) => {
   if (err) {
     console.error(`can't creat ..eslintrc in ${eslintConfigPath}`)
     return
