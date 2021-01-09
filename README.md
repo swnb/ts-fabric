@@ -12,6 +12,7 @@ A collection of configuration files containing prettier, eslint
 yarn add -D @swnb/fabric
 ```
 
+// create .prettierrc.js and .eslintrc file automatic
 ```shell
-npx @swnb/fabric
+npx @swnb/fabric 
 ```
