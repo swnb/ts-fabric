@@ -6,4 +6,12 @@
 
 A collection of configuration files containing prettier, eslint
 
+## Use
 
+```shell
+yarn add -D @swnb/fabric
+```
+
+```shell
+npx @swnb/fabric
+```
