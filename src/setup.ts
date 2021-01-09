@@ -4,10 +4,10 @@ const path = require('path')
 
 const prettierConfigPath = path.resolve('./.prettierrc.js')
 const prettierConfigContent = `
-const fabric = require('@swnb/fabric/dist/prettier');
+const prettier = require("@swnb/fabric/dist/prettier");
 
 module.exports = {
-  ...fabric.prettier,
+  ...prettier,
 };
 `
 fs.createWriteStream(prettierConfigPath).write(prettierConfigContent, (err: Error) => {
