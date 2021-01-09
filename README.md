@@ -1,4 +1,4 @@
-# @swnb/ts-fabric
+# swnb/ts-fabric
 
 > Power by [@umijs/fabric](https://github.com/umijs/fabric)
 
