@@ -6,6 +6,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': 0,
     'lines-between-class-members': 1,
     '@typescript-eslint/member-ordering': 1,
+    'no-constant-condition': ['error', { checkLoops: false }],
     eqeqeq: 0,
   },
 }
