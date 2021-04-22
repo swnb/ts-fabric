@@ -1,6 +1,17 @@
 #!/usr/bin/env node
+import type { Stats } from 'fs'
+
 const fs = require('fs')
 const path = require('path')
+
+// 删除原来的配置文件
+const originConfigPath = path.resolve('.', '.prettierrc')
+fs.stat(originConfigPath, (err: Error | null, stats: Stats) => {
+  if (err) return
+  if (stats.isFile()) {
+    fs.unlink(originConfigPath, () => {})
+  }
+})
 
 const prettierConfigPath = path.resolve('./.prettierrc.js')
 const prettierConfigContent = `
