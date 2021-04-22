@@ -9,7 +9,10 @@ const originConfigPath = path.resolve('.', '.prettierrc')
 fs.stat(originConfigPath, (err: Error | null, stats: Stats) => {
   if (err) return
   if (stats.isFile()) {
-    fs.unlink(originConfigPath, () => {})
+    fs.unlink(originConfigPath, (err: Error | null) => {
+      if (err) return
+      console.log('delete .prettierrc')
+    })
   }
 })
 
@@ -21,7 +24,7 @@ module.exports = {
   ...prettier,
 };
 `
-fs.createWriteStream(prettierConfigPath).write(prettierConfigContent, (err: Error) => {
+fs.createWriteStream(prettierConfigPath).write(prettierConfigContent, (err: Error | null) => {
   if (err) {
     console.error(`can't creat .prettierrc.js in ${prettierConfigPath}`)
     return
@@ -36,7 +39,7 @@ const eslintConfigContent = `
   "extends": "./node_modules/@swnb/fabric/dist/eslint"
 }
 `
-fs.createWriteStream(eslintConfigPath).write(eslintConfigContent, (err: Error) => {
+fs.createWriteStream(eslintConfigPath).write(eslintConfigContent, (err: Error | null) => {
   if (err) {
     console.error(`can't creat ..eslintrc in ${eslintConfigPath}`)
     return
