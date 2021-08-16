@@ -9,6 +9,6 @@ module.exports = {
     '@typescript-eslint/member-ordering': 1,
     'no-constant-condition': ['error', { checkLoops: false }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    "no-sequences": [{ "allowInParentheses": false }]
+    "no-sequences": [1, { "allowInParentheses": false }]
   },
 }
