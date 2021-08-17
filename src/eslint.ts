@@ -1,4 +1,4 @@
-import baseConfigs from '@umijs/fabric/dist/eslint'
+import baseConfigs from './umi-eslint-config'
 
 module.exports = {
   extends: [baseConfigs],
