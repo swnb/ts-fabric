@@ -1,8 +1,9 @@
 import baseConfigs from './umi-eslint-config'
 
 module.exports = {
-  extends: [baseConfigs],
+  ...baseConfigs,
   rules: {
+    ...baseConfigs.rules,
     eqeqeq: 0,
     'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
     'consistent-return': 0,
