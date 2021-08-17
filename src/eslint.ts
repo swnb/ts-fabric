@@ -1,4 +1,4 @@
-const baseConfigs = require('@umijs/fabric/dist/eslint')
+import baseConfigs from '@umijs/fabric/dist/eslint'
 
 module.exports = {
   extends: [baseConfigs],
