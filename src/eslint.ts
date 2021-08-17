@@ -1,5 +1,7 @@
+const baseConfigs = require('@umijs/fabric/dist/eslint')
+
 module.exports = {
-  extends: [require.resolve('@umijs/fabric/dist/eslint')],
+  extends: [baseConfigs],
   rules: {
     eqeqeq: 0,
     'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
@@ -9,6 +11,6 @@ module.exports = {
     '@typescript-eslint/member-ordering': 1,
     'no-constant-condition': ['error', { checkLoops: false }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    "no-sequences": [1, { "allowInParentheses": false }]
+    'no-sequences': [1, { allowInParentheses: false }],
   },
 }
