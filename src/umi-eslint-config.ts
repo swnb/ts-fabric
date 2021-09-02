@@ -38,7 +38,7 @@ if (isTsProject) {
 }
 
 export default {
-  extends: ['eslint-config-airbnb-base', 'prettier', 'prettier/react'].concat(
+  extends: ['eslint-config-airbnb-base', 'prettier'].concat(
     isTsProject
       ? ['prettier/@typescript-eslint', 'plugin:@typescript-eslint/recommended']
       : ['plugin:react/recommended'],
