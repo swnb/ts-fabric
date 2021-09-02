@@ -39,9 +39,7 @@ if (isTsProject) {
 
 export default {
   extends: ['eslint-config-airbnb-base', 'prettier'].concat(
-    isTsProject
-      ? ['prettier/@typescript-eslint', 'plugin:@typescript-eslint/recommended']
-      : ['plugin:react/recommended'],
+    isTsProject ? ['plugin:@typescript-eslint/recommended'] : ['plugin:react/recommended'],
   ),
   parser: isTsProject ? '@typescript-eslint/parser' : '@babel/eslint-parser',
   plugins: ['eslint-comments', 'react', 'jest', 'unicorn', 'react-hooks'],
