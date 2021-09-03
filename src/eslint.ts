@@ -13,5 +13,6 @@ module.exports = {
     'no-constant-condition': ['error', { checkLoops: false }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'no-sequences': [1, { allowInParentheses: false }],
+    'no-empty': ['error', { allowEmptyCatch: true }],
   },
 }
