@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/swnb/ts-fabric#readme",
   "dependencies": {
-    "@umijs/fabric": "^2.4.11"
+    "@umijs/fabric": "^2.4.11",
+    "eslint-config-airbnb-base": "^14.2.1"
   }
 }

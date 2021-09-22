@@ -2,9 +2,11 @@ lockfileVersion: 5.3
 
 specifiers:
   '@umijs/fabric': ^2.4.11
+  eslint-config-airbnb-base: ^14.2.1
 
 dependencies:
   '@umijs/fabric': 2.6.4
+  eslint-config-airbnb-base: 14.2.1
 
 packages:
 
@@ -2481,6 +2483,18 @@ packages:
     dependencies:
       lodash.get: 4.4.2
       lodash.zip: 4.2.0
+    dev: false
+
+  /eslint-config-airbnb-base/14.2.1:
+    resolution: {integrity: sha512-GOrQyDtVEc1Xy20U7vsB2yAoB4nBlfH5HZJeatRXHleO+OS5Ot+MWij4Dpltw4/DyIkqUfqz1epfhVR5XWWQPA==}
+    engines: {node: '>= 6'}
+    peerDependencies:
+      eslint: ^5.16.0 || ^6.8.0 || ^7.2.0
+      eslint-plugin-import: ^2.22.1
+    dependencies:
+      confusing-browser-globals: 1.0.10
+      object.assign: 4.1.2
+      object.entries: 1.1.4
     dev: false
 
   /eslint-config-airbnb-base/14.2.1_44936d22002d8391d694a30a93d20642:
