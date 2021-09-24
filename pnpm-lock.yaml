@@ -16,6 +16,7 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-formatter-pretty: ^4.0.0
   eslint-plugin-babel: ^5.3.0
+  eslint-plugin-eslint-comments: ^3.2.0
   eslint-plugin-jest: ^24.0.1
   eslint-plugin-promise: ^5.0.0
   eslint-plugin-react: ^7.21.5
@@ -48,6 +49,7 @@ dependencies:
   eslint-config-prettier: 8.3.0_eslint@7.32.0
   eslint-formatter-pretty: 4.1.0
   eslint-plugin-babel: 5.3.1_eslint@7.32.0
+  eslint-plugin-eslint-comments: 3.2.0_eslint@7.32.0
   eslint-plugin-jest: 24.4.0_79d1595ac137e2cc60da3c9a0e522fb9
   eslint-plugin-promise: 5.1.0_eslint@7.32.0
   eslint-plugin-react: 7.24.0_eslint@7.32.0
@@ -2108,6 +2110,17 @@ packages:
     dependencies:
       eslint: 7.32.0
       eslint-rule-composer: 0.3.0
+    dev: false
+
+  /eslint-plugin-eslint-comments/3.2.0_eslint@7.32.0:
+    resolution: {integrity: sha512-0jkOl0hfojIHHmEHgmNdqv4fmh7300NdpA9FFpF7zaoLvB/QeXOGNLIo86oAveJFrfB1p05kC8hpEMHM8DwWVQ==}
+    engines: {node: '>=6.5.0'}
+    peerDependencies:
+      eslint: '>=4.19.1'
+    dependencies:
+      escape-string-regexp: 1.0.5
+      eslint: 7.32.0
+      ignore: 5.1.8
     dev: false
 
   /eslint-plugin-jest/24.4.0_79d1595ac137e2cc60da3c9a0e522fb9:
