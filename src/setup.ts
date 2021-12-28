@@ -58,7 +58,7 @@ const eslintConfigContent = `
 }
 `
 
-if (!fs.existsSync(eslintConfigContent) || !isAutomaticCall) {
+if (!fs.existsSync(eslintConfigPath) || !isAutomaticCall) {
   fs.createWriteStream(eslintConfigPath).write(eslintConfigContent, (err: Error | null) => {
     if (err) {
       console.error(`can't creat ..eslintrc in ${eslintConfigPath}`)
