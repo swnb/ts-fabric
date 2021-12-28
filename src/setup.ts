@@ -7,8 +7,9 @@ const path = require('path')
 let isAutomaticCall = false
 
 let currentWorkDirPath = process.argv[2]
-if (!currentWorkDirPath) {
+if (currentWorkDirPath) {
   isAutomaticCall = true
+} else {
   currentWorkDirPath = '.'
 }
 
