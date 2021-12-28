@@ -4,9 +4,7 @@ import type { Stats } from 'fs'
 
 const fs = require('fs')
 const path = require('path')
-// const debug = require('debug')('@swnb/fabric/setup')
-
-const debug = console.log
+const debug = require('debug')('@swnb/fabric/setup')
 
 let isAutomaticCall = false
 
