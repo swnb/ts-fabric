@@ -1,3 +1,5 @@
+// this is copy from umi eslint config `
+
 import * as path from 'path'
 import * as fs from 'fs'
 import tsEslintConfig from './tslint'
