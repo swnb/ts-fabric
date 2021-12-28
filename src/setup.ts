@@ -1,8 +1,10 @@
 #!/usr/bin/env node
+
 import type { Stats } from 'fs'
 
 const fs = require('fs')
 const path = require('path')
+const debug = require('debug')('@swnb/fabric/setup')
 
 let isAutomaticCall = false
 
@@ -12,6 +14,9 @@ if (currentWorkDirPath) {
 } else {
   currentWorkDirPath = '.'
 }
+
+debug('process argv', process.argv)
+debug('currentWorkDirPath', currentWorkDirPath)
 
 // 删除原来的配置文件
 
@@ -41,10 +46,13 @@ module.exports = {
 };
 `
 
+debug(`isAutomaticCall -> ${isAutomaticCall}`)
+debug(`${prettierConfigPath} exists -> ${fs.existsSync(prettierConfigPath)}`)
 if (!fs.existsSync(prettierConfigPath) || !isAutomaticCall) {
+  debug(`start write ${prettierConfigPath}`)
   fs.createWriteStream(prettierConfigPath).write(prettierConfigContent, (err: Error | null) => {
     if (err) {
-      console.error(`can't creat .prettierrc.js in ${prettierConfigPath}`)
+      console.error(`can't create .prettierrc.js in ${prettierConfigPath}`)
       return
     }
 
@@ -59,10 +67,12 @@ const eslintConfigContent = `
 }
 `
 
+debug(`${eslintConfigContent} exists -> ${fs.existsSync(eslintConfigContent)}`)
 if (!fs.existsSync(eslintConfigPath) || !isAutomaticCall) {
+  debug(`start write ${eslintConfigPath}`)
   fs.createWriteStream(eslintConfigPath).write(eslintConfigContent, (err: Error | null) => {
     if (err) {
-      console.error(`can't creat ..eslintrc in ${eslintConfigPath}`)
+      console.error(`can't create ..eslintrc in ${eslintConfigPath}`)
       return
     }
 
