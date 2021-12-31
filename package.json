@@ -9,9 +9,8 @@
   ],
   "scripts": {
     "build": "tsc --build tsconfig.json",
-    "prepublishOnly": "git push --follow-tags && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node ./dist/setup.js $INIT_CWD"
+    "postinstall": "cross-env-shell node ./dist/setup.js $INIT_CWD"
   },
   "repository": {
     "type": "git",
@@ -60,6 +59,7 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
-    "@types/node": "^16.6.1"
+    "@types/node": "^16.6.1",
+    "cross-env": "^7.0.3"
   }
 }
