@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cross-env-shell node ./dist/setup.js $INIT_CWD"
+    "postinstall": "npx cross-env-shell node ./dist/setup.js $INIT_CWD"
   },
   "repository": {
     "type": "git",
