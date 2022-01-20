@@ -14,5 +14,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'no-sequences': [1, { allowInParentheses: false }],
     'no-empty': ['error', { allowEmptyCatch: true }],
+    'no-await-in-loop': 0,
+    'no-bitwise': 0,
   },
 }
